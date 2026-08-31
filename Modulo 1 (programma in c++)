@@ -1,0 +1,54 @@
+#include <iostream>
+#include <string>
+#include <cmath> // Per usare funzioni matematiche come round, se necessario
+// Uso dello spazio dei nomi standard per semplificare il codice (es. cout invece di std::cout)
+using namespace std;
+
+//Scheletro fornito dal docente A.Mineo
+
+int main() {
+    
+    //dichiarazione delle variabili
+    string nome;
+    string videogioco;
+    int numHobby;
+    string hobby;
+
+    //nome e videogioco preferito
+    cout << "Come ti chiami? ";
+    cin >> nome;
+    cout << "Qual e' il tuo videogioco preferito? ";
+    cin >> videogioco;
+
+    
+    if (videogioco == "Minecraft") {
+        cout << "Bellissimo, ci si puo' costruire di tutto!" << endl;
+    } else {
+        cout << videogioco << " e' un bel gioco ma non è il mio preferito!" << endl;
+    }
+    cout << "Quanti hobby hai? ";
+    cin >> numHobby;
+
+    
+    if (numHobby > 0) {
+        cout << "Elencali:" << endl;
+        // CICLO 1: Chiede gli hobby
+        for (int i = 0; i < numHobby; i++) {
+            cout << "- ";
+            cin >> hobby;
+        }
+    } 
+    
+    //else nel caso non abbia hobby
+    else {
+        cout << "Non hai nessun hobby? che strano" << endl;
+    }
+
+    //if nel caso gli hobby siano più di 2
+    if (numHobby > 2) {
+        cout << "Hai almeno del tempo libero?" << endl;
+    } 
+ return 0;
+
+
+}
